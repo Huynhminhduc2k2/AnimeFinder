@@ -1,0 +1,127 @@
+:root{
+    --header-bg: #2C6700;
+    --header-title: white;
+    --footer-bg: #2C6700;
+    --footer-text: white;
+    --container-bg: #E5E4D7;
+    --container-title: white;
+    --container-content-title: #FFCF79;
+    --text: #E5E4D7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+#title{
+    font-size: 7rem;
+    color: var(--header-title);
+    font-weight: bold;
+    font-style: italic;
+}
+
+#search, #search-Btn{
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+#search{
+    width: 25%;
+    border: none;
+}
+
+#search-Btn{
+    width: 10%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 5px #999;
+}
+
+#search-Btn:hover{
+    color: white;
+    background-color: gray;
+}
+
+#search-Btn:active{
+    color: white;
+    background-color: gray;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+header{
+    background-color: var(--header-bg);
+    padding: 40px 0;
+}
+
+main{
+    background-color: var(--container-bg);
+}
+
+.container-random{
+    padding-bottom: 50px;
+    color: var(--container-title);
+}
+
+.imgAnimeRandom{
+    height: 350px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+#random-Btn{
+    font-size: 2rem;
+    width: 250px;
+    height: 80px;
+    margin: 10% 0;
+    border-radius: 20px;
+    background-color: #92CD00;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 9px #999;
+}
+
+#random-Btn:hover{
+    background-color: #2C6700;
+}
+
+#random-Btn:active{
+    background-color: #2C6700;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 50px 50px 25px;
+    gap: 30px;
+    text-align: center;
+    color: var(--container-title);
+    -webkit-text-stroke: 0.1px black;
+ }
+
+.titleAnime{
+    background-color: #2C6700;
+}
+
+.imgAnime{
+    height: 300px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+footer{
+    background-color: var(--footer-bg);
+    padding: 35px 0;
+    font-size: 1.5rem;
+    color: var(--footer-text);
+}
+
+#reference{
+    color: #FFCF79;
+}

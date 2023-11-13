@@ -1,0 +1,35 @@
+<%- include(`./partials/header.ejs`) %>
+
+<!-- Main section -->
+<!-- Show list of searched anime / choose random anime -->
+<% if (!locals.result) { %>
+    <form action="/random" method="post">
+        <input type="submit" name="random" value="Random Anime" id="random-Btn">
+    </form>
+<% } else { %>
+    <div class="container">
+        <% result.forEach(anime => { %>
+            <div class="container-item">
+                <img src= <%= anime.images.jpg.large_image_url %> atl="Image of <%= anime.title %>" class = "imgAnime"/>
+                <h2 class="titleAnime"> <%= anime.title %> </h2>
+            </div>
+        <% }) %>
+    </div>
+<% } %>
+
+<% if(locals.randomAnime) { %>
+    <div class = "container-random">
+        <img src= <%= randomAnime.images.jpg.large_image_url %> atl="Image of <%= randomAnime.title %>" class = "imgAnimeRandom"/>
+        <h2> <%= randomAnime.title %> </h2>
+    </div>
+<% } %>
+
+<% if (locals.statusSearch) { %>
+    <h2>Anime Not Found</h2>
+<% } %>
+
+<% if (locals.error) { %>
+    <h2><%= error %></h2>
+<% } %>
+
+<%- include(`./partials/footer.ejs`) %>
