@@ -52,7 +52,7 @@ app.post(`/random`, async (req, res) => {
     const result = await axios.get(API_URL + `/random/anime`);
     const random = result.data;
     //console.log(API_URL + `/random/anime`);
-    console.log(random.data.images.jpg.image_url);
+    //console.log(random.data.images.jpg.image_url);
     res.render('index.ejs', { randomAnime: random.data });
   } catch (error) {
     console.log('Error', error.response.data);
